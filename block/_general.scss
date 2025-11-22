@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Faster One';
+
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+body {
+  font-family: 'Faster One';
+  cursor: wait;
+}
+::selection {
+  background: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff, #00f5ff);
+  color: #fff;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
