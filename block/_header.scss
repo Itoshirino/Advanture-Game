@@ -26,15 +26,20 @@
   z-index: -1;
 }
 .todo__input select {
-  font-family: "Faster One", cursive;
+  font-family: "Faster One";
   font-size: 24px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   animation: Rgbtext 5s ease infinite;
+  border: none;
   background: linear-gradient(90deg, #3a86ff, #8338ec);
+  &:focus {
+    outline: none;
+  }
 }
 
 .todo__input select option {
-  font-family: "Faster One", cursive;
+  font-family: "Faster One";
+  border: none;
   font-size: 24px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   animation: Rgbtext 5s ease infinite;
@@ -56,17 +61,28 @@
   }
 }
 
-.box {
+.box__wrapper {
   background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
   padding: 10px 15px;
   border-radius: 8px;
   color: #fff;
-  font-family: "Faster One", cursive;
+  font-family: "Faster One";
   display: flex;
   gap: 10px;
-
+  width: 100%;
   font-size: 16px;
   animation: Rgbborder 5s linear infinite;
+}
+.box {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .statistics {
@@ -74,7 +90,7 @@
   padding: 10px 15px;
   border-radius: 8px;
   color: #fff;
-  font-family: "Faster One", cursive;
+  font-family: "Faster One";
   font-size: 16px;
   width: 40%;
   animation: Rgbborder 5s linear infinite;
@@ -188,6 +204,9 @@
       &:hover {
         opacity: 0.85;
       }
+      &:focus {
+        outline: none;
+      }
     }
 
     #clearBtn {
@@ -196,13 +215,22 @@
       &:hover {
         opacity: 0.85;
       }
+      &:focus {
+        outline: none;
+      }
     }
   }
 
   .todo__list {
     max-height: 300px;
-    overflow-y: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
     width: 100%;
+    transition: all 5s ease;
+
+    &:hover {
+      overflow-y: auto;
+    }
 
     .todo__item {
       display: flex;
@@ -217,7 +245,7 @@
 
       &:hover {
         background: #9c4141;
-        transform: translateX(10px) translateY(3px) scale(1.02);
+        transform: translateX(10px) translateY(3px);
       }
 
       span {
@@ -231,7 +259,7 @@
         border: none;
         border-radius: 10px;
         font-weight: 500;
-        transition: 0.2s;
+        transition: all 0.2s ease;
       }
       .delete__btn {
         background-color: #ff5b5b;
@@ -239,7 +267,7 @@
         border: none;
         border-radius: 10px;
         font-weight: 500;
-        transition: 0.2s;
+        transition: all 0.2s ease;
         color: white;
       }
     }

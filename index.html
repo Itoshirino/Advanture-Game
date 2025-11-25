@@ -18,36 +18,44 @@
       <source src="./Img/game.mp4" />
     </video>
 
-    <div class="box">
-    <div class="todo__container">
-      <h1 class="todo__title">My adventure game</h1>
-      <div class="todo__input">
-        <input id="taskInput" type="text" placeholder="Enter a task..." />
-        <button id="addBtn">Add copy</button>
-        <button id="clearBtn">Clear all</button>
-        <select name="game" id="elHard">
-          <option value="none">None</option>
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
-        </select>
-      </div>
-      <ul id="taskList" class="todo__list"></ul>
-    </div>
+    <div class="box__wrapper">
+      <div class="box">
+        <div class="todo__container">
+          <h1 class="todo__title">My adventure game</h1>
+          <div class="todo__input">
+            <input id="taskInput" type="text" placeholder="Enter a task..." />
+            <select name="game" id="elHard">
+              <option value="none">None</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+            <button id="addBtn">Add copy</button>
+            <button id="clearBtn">Clear all</button>
+          </div>
+          <div
+            class="error"
+            style="display: none; color: red; margin-top: 10px"
+          >
+            error
+          </div>
+          <ul id="taskList" class="todo__list">
+          </ul>
+        </div>
 
-    <div class="statistics">
-      <div class="input__box">
-        <h2>Statistics</h2>
-
+        <div class="statistics">
+          <div class="input__box">
+            <h2>Statistics</h2>
+          </div>
+          <div class="tip__box">
+            <p class="tip__title">Tips</p>
+            <p class="tip__subtitle">
+              push0 qo'shadi, pop() oxirgis;.ni o'chiradi, shift! o'chiradi,
+              unshift0 boshga qo•shadi. flat() nested a-rays ochadi.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="tip__box">
-        <p class="tip__title">Tips</p>
-        <p class="tip__subtitle">
-          push0 qo'shadi, pop() oxirgis;.ni o'chiradi, shift! o'chiradi,
-          unshift0 boshga qo•shadi. flat() nested a-rays ochadi.
-        </p>
-      </div>
-    </div>
     </div>
 
     <script src="script.js"></script>
