@@ -4,7 +4,6 @@ const ClearBtn = document.querySelector("#clearBtn");
 const TaskList = document.querySelector("#taskList");
 const elchoose = document.querySelector("#elHard");
 const error = document.querySelector(".error");
-const editBtn = document.querySelector(".edit__btn");
 
 const length = 30;
 
@@ -40,17 +39,39 @@ function addTask() {
   }
 
   let li = document.createElement("li");
-  li.className = "todo__item";
+  li.className = "todo__box";
+
+  if (level === "easy") {
+    li.style.backgroundColor = "green";
+    li.style.color = "white";
+    saveData();
+  }
+
+  if (level === "medium") {
+    li.style.backgroundColor = "yellow";
+    li.style.color = "black";
+    saveData();
+  }
+
+  if (level === "hard") {
+    li.style.backgroundColor = "red";
+    li.style.color = "white";
+    saveData();
+  }
+
   li.innerHTML = `
-    ${taskText} ㅤㅤㅤ ${level} 
+    ${taskText} — ${level}
     <button class="edit__btn">Edit</button> 
     <button class="delete__btn">Delete</button>
   `;
+
   li.querySelector(".delete__btn").addEventListener("click", () => {
     li.remove();
-
+    saveData();
   });
+
   TaskList.appendChild(li);
+
   TodoInput.value = "";
   hideError();
   saveData();
@@ -67,6 +88,7 @@ function elError(e) {
   error.style.color = "red";
   error.style.display = "block";
   error.textContent = e;
+
 }
 
 function hideError() {

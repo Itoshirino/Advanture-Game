@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>My Advanture game</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normaliza.css" />
     <link rel="stylesheet" href="css/fonts.css" />
@@ -30,7 +30,7 @@
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
             </select>
-            <button id="addBtn">Add copy</button>
+            <button id="addBtn">Add</button>
             <button id="clearBtn">Clear all</button>
           </div>
           <div
@@ -39,21 +39,29 @@
           >
             error
           </div>
-          <ul id="taskList" class="todo__list">
-          </ul>
+          <ul id="taskList" class="todo__list"></ul>
         </div>
 
         <div class="statistics">
-          <div class="input__box">
-            <h2>Statistics</h2>
-          </div>
-          <div class="tip__box">
-            <p class="tip__title">Tips</p>
-            <p class="tip__subtitle">
-              push0 qo'shadi, pop() oxirgis;.ni o'chiradi, shift! o'chiradi,
-              unshift0 boshga qo•shadi. flat() nested a-rays ochadi.
-            </p>
-          </div>
+          <h3>Statistics</h3>
+          <ul>
+            <li>Total tasks: <span> 0 </span></li>
+            <li>Easy: <span> 0 </span></li>
+            <li>Medium: <span> 0 </span></li>
+            <li>Hard: <span> 0 </span></li>
+            <li>Completed: <span> 0 </span></li>
+          </ul>
+
+          <h4>Categories</h4>
+          <p class="title">
+            stealth, castle,deliver,town,quest,village,cave,explore
+          </p>
+
+          <h4>Tips</h4>
+          <p>
+            push() qo‘shadi, pop() oxirgisini o‘chiradi, shift() boshdagisini
+            o‘chiradi, unshift() boshiga qo‘shadi. flat() nested arrays ochadi.
+          </p>
         </div>
       </div>
     </div>
